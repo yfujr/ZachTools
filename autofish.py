@@ -12,6 +12,7 @@ pyautogui.FAILSAFE = True
 is_running = False
 status_window = None
 status_label = None
+total_caught = 0
 
 def create_status_window():
     global status_window, status_label, is_running
@@ -90,8 +91,11 @@ def perform_action():
             return
         pyautogui.click(button='left')
         time.sleep(click_interval)
-    
-    time.sleep(5)
+        
+    global total_caught
+    total_caught += 1
+    print(f"Caught fish - Total: {total_caught}")
+    time.sleep(2)
     if is_running:
         pyautogui.click(button='left')
 
