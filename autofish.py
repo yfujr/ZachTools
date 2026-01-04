@@ -194,6 +194,7 @@ def start_fishing():
                                 time.sleep(switch_delay)
                                 keyboard.press_and_release(fishingRodSlot)
                                 time.sleep(switch_delay)
+
                             except Exception as e:
                                 print(f"[Warning] Failed to re-equip rod: {e}")
 
