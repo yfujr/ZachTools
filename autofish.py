@@ -75,7 +75,7 @@ def find_on_screen(image_list, confidence=CONFIDENCE_LEVEL):
             continue
         except Exception as e:
             print(f"[Warning] Error checking {img}: {e}")
-            continueq
+            continue
     return False
 
 def safe_click(x=None, y=None):
