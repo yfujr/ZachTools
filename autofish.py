@@ -95,6 +95,7 @@ def safe_click(x=None, y=None):
         y = max(0, min(y, h - 1))
         
         pyautogui.click(x, y)
+        print("clicked")
         return True
     except Exception as e:
         print(f"[ERROR] Click failed: {e}")
